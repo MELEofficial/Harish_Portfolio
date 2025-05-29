@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Harish_Portfolio/static/css/main.2fde1d6a.css",
+    "main.js": "/Harish_Portfolio/static/js/main.e1256d05.js",
+    "static/media/resume.pdf": "/Harish_Portfolio/static/media/resume.a064f98716b6b4bf3ab3.pdf",
+    "static/media/harish_photo.jpg": "/Harish_Portfolio/static/media/harish_photo.0724c63bc265c2196520.jpg",
+    "index.html": "/Harish_Portfolio/index.html",
+    "main.2fde1d6a.css.map": "/Harish_Portfolio/static/css/main.2fde1d6a.css.map",
+    "main.e1256d05.js.map": "/Harish_Portfolio/static/js/main.e1256d05.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fde1d6a.css",
+    "static/js/main.e1256d05.js"
+  ]
+}
