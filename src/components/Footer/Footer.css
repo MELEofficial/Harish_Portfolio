@@ -1,0 +1,236 @@
+.footer-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #ffffff;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #00bcd4, #64ffda, #00bcd4) 1;
+  box-shadow: 0 -10px 30px rgba(0, 188, 212, 0.1);
+}
+
+.footer-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00bcd4, transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 0 2rem;
+}
+
+.footer-brand {
+  margin-bottom: 2rem;
+}
+
+.footer-brand h4 {
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: #b3b3b3;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 188, 212, 0.3);
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #00bcd4, #64ffda);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.social-link:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.social-link:hover {
+  color: #1a1a1a;
+  border-color: #00bcd4;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 188, 212, 0.4);
+}
+
+.social-link svg {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover svg {
+  transform: rotate(360deg);
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.quick-link {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.quick-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00bcd4, #64ffda);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.quick-link:hover {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.quick-link:hover::after {
+  width: 100%;
+}
+
+.footer-divider {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00bcd4, transparent);
+  border: none;
+  margin: 2rem auto;
+  opacity: 0.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #999999;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.footer-signature {
+  font-size: 0.85rem;
+  color: #666666;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.footer-signature span {
+  color: #00bcd4;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 2rem 1rem 1.5rem;
+  }
+  
+  .footer-brand h4 {
+    font-size: 1.3rem;
+  }
+  
+  .social-links {
+    gap: 1.5rem;
+  }
+  
+  .social-link {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .social-link svg {
+    font-size: 1.3rem;
+  }
+  
+  .quick-links {
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .quick-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .quick-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .footer-brand h4 {
+    font-size: 1.2rem;
+  }
+}
